@@ -44,9 +44,38 @@
 .section-footer {
   position: relative;
   height: 1px;
-  background: #ffffff;
-  width: 40%;
-  margin: 6rem 30% 0rem 30%;
+  background: "#53606b";
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.section-footer2 {
+  position: relative;
+  height: 1px;
+  background: "#53606b";
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+section .about-we {
+  justify-content: top;
+  align-items: top;
+  position: absolute;
+  display: flex;
+  top: 0;
+  margin-top: 5px;
+}
+
+section .about-we h2 {
+  font-family: "Sora";
+  font-size: 24px;
+  color: #ffffff;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .section-heading {
@@ -57,18 +86,27 @@
 
 #tranding {
   padding: 4rem 0;
+  height: 105vh;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width:1440px) {
   #tranding {
-    padding: 7rem 0;
+    padding: 4rem 0;
   }
 }
 
 #tranding .tranding-slider {
   height: 35rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  margin-top: 30px;
   position: relative;
+  background-color: #0a1a29c3;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 @media (max-width:500px) {
@@ -98,33 +136,34 @@
 .tranding-slide .tranding-slide-img {
   border-style: solid;
   border-width: 1.5px;
-  border-color: #264969;
-  border-radius: 2rem;
+  border-color: #1f4365e7;
+  border-radius: 10px;
   width: 24rem;
-  height: 25rem;
-  background-color: #0F2C47;
+  height: 22rem;
+  background-color: #0A1A29;
   box-shadow: rgba(0, 0, 0, 0.479) 0px 5px 18px;
 }
 
 .tranding-slide .tranding-slide-img img {
   width: 24rem;
-  height: 25rem;
+  height: 20rem;
   border-radius: 2rem;
   object-fit: cover;
 }
 
 .tranding-slide .tranding-slide-content {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 1.5rem;
-  border-color: #ecececd2;
+  border-radius: 12px;
+  border-color: #4a6074;
+  background-color: #172e44;
   position: absolute;
-  left: 11px;
-  top: 11px;
+  left: 8px;
+  top: 8px;
   right: 11px;
   bottom: 11px;
-  width: 22.5rem;
-  height: 23.6rem;
+  width: 23rem;
+  height: 21rem;
   overflow: auto;
 }
 
@@ -135,7 +174,7 @@
   position: relative;
   top: 2rem;
   font-size: 16px;
-  color: #b8c9ff;
+  color: #ffffff;
   font-weight: 700;
   font-family: 'Sora', sans-serif;
 }
@@ -144,18 +183,19 @@
   position: absolute;
   top: 4.6rem;
   left: 1.4rem;
-  color: #d6d6d6;
-  line-height: 1.5;
+  color: #ffffff;
+  line-height: 16 *1.4;
+  letter-spacing: 0px;
   padding: 5px 5px;
   font-family: 'Sora';
   font-size: 16px;
 }
 
 .text-description-name {
-  font-size: 1.8rem;
   font-family: 'Sora';
+  font-weight: 300;
   font-size: 16px;
-  letter-spacing: 1.2;
+  letter-spacing: 1px;
 }
 
 .mini-text {

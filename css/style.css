@@ -214,7 +214,7 @@ body {
 main .home {
   display: block;
   justify-content: center;
-  margin: 10px 16px 10px 16px;
+  margin: 10px 16px 0px 16px;
   position: relative;
   
 }

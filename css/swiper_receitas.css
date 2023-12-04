@@ -32,12 +32,12 @@
 */
 
 .container-top {
+  height: 50vh;
   width: 100%;
-  background-color: #193756d2;
+  background-color: #0a1a29c3;
   box-shadow: rgba(42, 42, 79, 0.25) 0px 13px 27px -5px,
               rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  margin-top: 5rem;
-  padding: 3rem 0rem 4rem 4rem;
+  padding: 6rem 0rem 0rem 4rem;
 }
 
 .text-center {
@@ -47,42 +47,45 @@
 .text-left-section {
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
+  width: 160px;
+  border-bottom: 1px #ffffff solid;
   font-weight: 500;
 }
 
 .text-center-section-subheading {
   font-size: 40px;
   font-weight: 560;
-  color: #e0e0e0;
-  text-shadow: 5px 3px 1px #1e263e;
+  color: #ffffff;
+  width: 80%;
+  text-shadow: 2px 2px 1px #ffffff4c;
+  border-bottom: 1px #ffffff solid;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  max-width: 80rem;
 }
 
 .text-center-section-heading {
   font-size: 20px;
   font-family: 'Sora', sans-serif;
-  color: #ffffff;
-  background-color: #ffffff32;
+  color: #000000;
+  border-bottom: 1px #000000 solid;
+  background-color: #ffffffe9;
   box-shadow: rgba(42, 42, 79, 0.25) 0px 13px 27px -5px,
               rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
-  margin: 3rem 0rem;
-  padding: 1rem 1rem;
+  padding: 1rem 0rem 1rem 4rem;
   border-radius: 4px;
 }
 
 .container-swiper {
   width: 100%;
-  margin: 0 auto;
-  background-color: #b8b8d3;
+  background-color: #1d5692;
 }
 
 #tranding {
-  padding: 4rem 0;
+  background-color: #0a1a29c2;
+  height: 682px;
 }
 
 @media (max-width:1440px) {
@@ -143,6 +146,7 @@
   background: #ffffff;
   width: 40%;
   margin: 0 auto;
+  top: 52px;
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
@@ -218,7 +222,7 @@
 }
 
 .tranding-slider-control .slider-arrow {
-  background: #0F2C47;
+  background: #ffffffe9;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
@@ -229,7 +233,7 @@
 
 .tranding-slider-control .slider-arrow ion-icon {
   font-size: 1.5rem;
-  color: #b8b8d3;
+  color: #2a2a2a;
 }
 
 
@@ -248,5 +252,5 @@
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: #204e7c;
+  background: #ffffff;
 }
