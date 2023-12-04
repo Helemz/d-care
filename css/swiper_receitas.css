@@ -40,11 +40,6 @@
   padding: 3rem 0rem 4rem 4rem;
 }
 
-.container {
-  max-width: 124rem;
-  margin: 0 auto;
-}
-
 .text-center {
   text-align: left;
 }
@@ -53,11 +48,12 @@
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   color: #fff;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .text-center-section-subheading {
-  font-size: 4.8rem;
+  font-size: 40px;
   font-weight: 560;
   color: #e0e0e0;
   text-shadow: 5px 3px 1px #1e263e;
@@ -66,16 +62,23 @@
 }
 
 .text-center-section-heading {
-  font-size: 2.4rem;
-  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-family: 'Sora', sans-serif;
   color: #ffffff;
   background-color: #ffffff32;
   box-shadow: rgba(42, 42, 79, 0.25) 0px 13px 27px -5px,
               rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   font-weight: 400;
+  letter-spacing: 1px;
   margin: 3rem 0rem;
   padding: 1rem 1rem;
   border-radius: 4px;
+}
+
+.container-swiper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #b8b8d3;
 }
 
 #tranding {
@@ -89,7 +92,7 @@
 }
 
 #tranding .tranding-slider {
-  height: 52rem;
+  height: 32rem;
   padding: 2rem 0;
   position: relative;
 }
@@ -101,8 +104,8 @@
 }
 
 .tranding-slide {
-  width: 37rem;
-  height: 36rem;
+  width: 20rem;
+  height: 22rem;
   position: relative;
 }
 
@@ -118,8 +121,8 @@
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 37rem;
-  height: 36rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 2rem;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.535) 0px 5px 18px;
@@ -144,8 +147,8 @@
 
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: 1rem;
+  left: 1rem;
   color: #222224;
   border-radius: 8px;
   background-color: #ffffffba;
@@ -154,8 +157,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.food-name {
+  font-size: 20px;
+}
+
 .food-rating {
-  padding-top: 1rem;
+  padding-top: 10px;
   display: flex;
   gap: 1rem;
 }
@@ -212,18 +219,19 @@
 
 .tranding-slider-control .slider-arrow {
   background: #0F2C47;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.323));
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
 .tranding-slider-control .slider-arrow ion-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #b8b8d3;
 }
+
 
 .tranding-slider-control .slider-arrow::after {
   content: '';
@@ -232,7 +240,7 @@
 .tranding-slider-control .swiper-pagination {
   position: relative;
   width: 15rem;
-  bottom: 1rem;
+  bottom: 0.2rem;
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
