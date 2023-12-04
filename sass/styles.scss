@@ -1,20 +1,22 @@
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@use "components/footer" as *;
+@use "components/swiper" as *;
+@use "components/d_jovem" as *;
+@use "components/section_cards" as *;
+@use "components/swiper_receitas" as *;
 
-* {
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -23,17 +25,21 @@ body {
   max-height: 100vh;
 }
 
+/** 
+  ! SCROLL BAR
+*/
+
 ::-webkit-scrollbar {
   width: 1rem;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0.7rem;
-  background:  linear-gradient(45deg, #234c74 0%, #417fbd 100%);
+  background: linear-gradient(45deg, #234c74 0%, #417fbd 100%);
   transition: all 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background:  linear-gradient(45deg, #374c9e 0%, #334797 50%, #224478 100%);
+  background: linear-gradient(45deg, #374c9e 0%, #334797 50%, #224478 100%);
   transition: all 0.5s ease-in-out;
 }
 
@@ -41,12 +47,14 @@ body {
   background: #102941;
 }
 
+/**
+  ! END SCROLL BAR
+*/
 
 .nav ul {
   list-style-type: none;
   background-image: linear-gradient(to right, #0a1a29, #0f2c47, #0a1a29);
-  box-shadow: rgba(42, 42, 79, 0.25) 0px 13px 27px -5px,
-              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(42, 42, 79, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   height: 48px;
   user-select: none;
   width: 100%;
@@ -89,43 +97,43 @@ body {
   color: #ffffffb3;
   text-decoration: none;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   pointer-events: visible;
   padding: 0px 10px;
-  transition:0.6s; 
+  transition: 0.6s;
 }
 
 .nav ul li a:hover,
 .nav ul li a:focus {
   transition: 0.6s;
-	outline: none;
-	color:#ffffff; 
+  outline: none;
+  color: #ffffff;
 }
 
 .nav ul li a:before,
 .nav ul li a:after {
   opacity: 0;
-	display: inline-block;
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.2s;
-	transition: transform 0.4s, opacity 0.2s;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.2s;
+  transition: transform 0.4s, opacity 0.2s;
 }
 
 .nav ul li a:before {
-  content: '[';
-	margin-right: 8px;
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
-	transform: translateX(20px);
+  content: "[";
+  margin-right: 8px;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 .nav ul li a:after {
-  content: ']';
-	margin-left: 8px;
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	transform: translateX(-20px);
+  content: "]";
+  margin-left: 8px;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
 }
 
 .nav ul li a:hover::before,
@@ -133,9 +141,9 @@ body {
 .nav ul li a:focus:before,
 .nav ul li a:focus:after {
   opacity: 1;
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .nav ul ul {
@@ -144,7 +152,7 @@ body {
   background-image: linear-gradient(180deg, #0a1a29, #0f2c47);
   position: absolute;
   opacity: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 130px;
   height: 80px;
   border-radius: 8px 8px 8px 1px;
@@ -169,7 +177,7 @@ body {
 .nav ul ul li a {
   display: block;
   text-decoration: none;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   margin: 8px;
 }
@@ -208,7 +216,6 @@ body {
 }
 */
 
-
 /*background menu*/ /*POSITION STATIC serve ou nao serev*/
 main .home {
   display: block;
@@ -224,7 +231,7 @@ main .home .background-home::after {
   height: 100%;
   top: 0;
   left: 0;
- /* background-image: radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 30%, #00000000 65%, #0000000b 85%, #00000084 100%);*/
+  /* background-image: radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 30%, #00000000 65%, #0000000b 85%, #00000084 100%);*/
 }
 
 main .home .background-home {
@@ -269,7 +276,7 @@ main .home .mensage-home .title {
 
 main .home .mensage-home .title h1 {
   margin: auto;
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
   text-align: center;
   font-size: 48px;
   font-style: normal;
@@ -280,7 +287,7 @@ main .home .mensage-home .title h1 {
 
 main .home .mensage-home .title h1 .d {
   color: #000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -289,8 +296,8 @@ main .home .mensage-home .title h1 .d {
 }
 
 main .home .mensage-home .title h1 span {
-  color: #3FBDEC;
-  font-family: 'Roboto', sans-serif;
+  color: #3fbdec;
+  font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -311,7 +318,7 @@ main .home .mensage-home .legenda {
 main .home .mensage-home .legenda h3 {
   color: #000;
   margin: 1px;
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
   text-align: center;
   font-size: 24px;
   font-style: normal;
@@ -359,41 +366,33 @@ main .home .mensage-home .style-button .button-install::after {
 main .home .mensage-home .style-button .button-install::before {
   top: -70%;
   background-image: radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, transparent 20%, #154f85 20%, transparent 30%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, transparent 20%, #154f85 15%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 20%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 
-  10% 10%, 18% 18%;
-  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%,
-  55% 90%, 70% 90%;
+    radial-gradient(circle, transparent 20%, #154f85 20%, transparent 30%),
+    radial-gradient(circle, #154f85 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #154f85 15%, transparent 20%),
+    radial-gradient(circle, #154f85 20%, transparent 20%), radial-gradient(circle, #154f85 20%, transparent 20%),
+    radial-gradient(circle, #154f85 20%, transparent 20%), radial-gradient(circle, #154f85 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 20%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
   animation: topBubbles 0.6s ease-in-out infinite;
 }
 
 @keyframes topBubbles {
   50% {
-    background-position:  0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-    50% 50%, 65% 20%, 90% 30%;
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
   }
   100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-    50% 40%, 65% 10%, 90% 20%;
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
 
-main .home .mensage-home .style-button .button-install::after{
+main .home .mensage-home .style-button .button-install::after {
   bottom: -70%;
   background-image: radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, transparent 20%, #154f85 15%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%),
-                    radial-gradient(circle, #154f85 20%, transparent 20%);
+    radial-gradient(circle, transparent 20%, #154f85 15%, transparent 20%),
+    radial-gradient(circle, #154f85 20%, transparent 20%), radial-gradient(circle, #154f85 20%, transparent 20%),
+    radial-gradient(circle, #154f85 20%, transparent 20%), radial-gradient(circle, #154f85 20%, transparent 20%),
+    radial-gradient(circle, #154f85 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
   background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
   animation: bottonBubbles 0.6s ease-in-out infinite;
@@ -401,28 +400,25 @@ main .home .mensage-home .style-button .button-install::after{
 
 @keyframes bottonBubbles {
   50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-    105% 0%;
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
   }
   100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-    110% 10%;
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
 
 main .home .mensage-home .style-button .button-install p {
   font-size: 32px;
-  color: #FFF;
+  color: #fff;
   font-style: normal;
   font-weight: 700;
   line-height: 140.2%; /* 56.08px */
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
-
 /* Resolução computador lab-2 */
-@media only screen and (max-width:1600px) {
+@media only screen and (max-width: 1600px) {
   .nav ul li {
     left: 1200px;
   }
@@ -434,9 +430,8 @@ main .home .mensage-home .style-button .button-install p {
 }*/
 
 /* Resolução not da heli */
-@media only screen and (max-width:1366px) {
+@media only screen and (max-width: 1366px) {
   .nav ul li {
     left: 930px;
   }
-
 }
