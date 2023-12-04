@@ -17,7 +17,7 @@
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   color: #fff;
-  width: 140px;
+  width: 160px;
   font-size: 14px;
   border-bottom: 1px #ffffff solid;
   font-weight: 500;
@@ -65,7 +65,7 @@ section.module.parallax::after {
 }
 
 section.module.parallax-1 {
-  background-image: url("/img/jovem.png");
+  background-image: url("/img/crianca_feliz.svg");
 }
 
 /*
@@ -154,7 +154,7 @@ section:nth-of-type(5) .container-flex-pipi .container-percent .circle-progress 
   margin-bottom: 1rem;
   border-radius: 50%;
   color: #fff;
-  background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+  background: #22ff7e linear-gradient(to right, transparent 50%, var(--clr) 0);
 }
 
 section:nth-of-type(5) .container-flex-pipi .container-percent .circle-progress::before {
@@ -233,7 +233,6 @@ section:nth-of-type(7) {
   height: 45vh;
 }
 
-
 .container-number {
   width: 100%;
   padding-left: 5rem;
@@ -294,15 +293,14 @@ section:nth-of-type(7) .text-botton {
 }
 
 .teste {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  list-style: none;
-  width: 200px;
-  left: 78px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    list-style: none;
+    width: 200px;
+    left: 78px;
+    position: relative;
 }
-
 
 .number-list1 {
     margin-top: 5rem;
@@ -331,15 +329,17 @@ section:nth-of-type(7) .text-botton {
 section:nth-of-type(7) .text-botton .text-grid{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0px;
   list-style: none;
+  width: calc(100%/3.5);
   position: relative;
-  width: 250px;
-  background-color: violet;
-
+  background-color: blue;
 }
 
 section:nth-of-type(7) .text-botton .text-grid .text-description {
   color: #fff;
-  width: 100px;
+  width: 100%;
+  background-color: #22ff7e;
+  height: 100%;
+  display: flex;
 }

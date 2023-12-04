@@ -283,3 +283,74 @@ section .about-we h2 {
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: #204e7c;
 }
+
+@media only screen and (max-width: 375px) {
+  .container-swiper {
+    max-width: 24rem;
+    height: 90vh;
+    padding: 0 0rem;
+    margin: 0;
+  }
+  
+section .about-we {
+  top: 0;
+  margin-top: 0px;
+  margin-left: -110px;
+}
+
+section .about-we h2 {
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#tranding {
+  padding: 4rem 0;
+  height: 105vh;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: violet;
+}
+}
+
+
+@media only screen and (max-width:1440px) {
+  section .about-we {
+    margin-top: 45px;
+  }
+  section .about-we h2 {
+    font-size: 24px;
+  }
+  #tranding {
+    padding: 4rem 0;
+    height: 85vh;
+  }
+  .tranding-slide .tranding-slide-img {
+    width: 25rem;
+    height: 23rem;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 24rem;
+    background-color: red;
+    height: 20rem;
+  }
+  
+  .tranding-slide .tranding-slide-content {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: #4a6074;
+    background-color: #172e44;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    right: 11px;
+    bottom: 11px;
+    width: 23rem;
+    height: 21rem;
+    overflow: auto;
+  }
+}
